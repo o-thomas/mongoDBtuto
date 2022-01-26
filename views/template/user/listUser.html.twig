@@ -1,0 +1,22 @@
+{% extends "./../main.html.twig" %}
+
+{% block main %}
+<div class="container mt-5">
+<div class="row">
+{% for user in users %}
+    <div class="col-md-3 card mx-auto">
+        <div class="card-body">
+            <h5 class="card-title text-center">{{user.name}} {{user.firstname}}</h5>
+            <p class="card-text text-center">{{user.mail}}</p>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="/updateUser/{{user.id}}" class="btn btn-primary ">modifer</a>
+                    <a href="/deleteUser/{{user.id}}" class="btn btn-danger ">supprimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
