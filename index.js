@@ -70,5 +70,11 @@ app.post('/updateUser/:id', async (req, res) =>{
     })
  })
 
+ app.get('/salut', async (req, res) =>{
+   console.log('salut');
+   res.redirect('/')
+ })
+
+
 
 
